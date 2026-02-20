@@ -1,4 +1,4 @@
-🌿 Botanic Spectrum Analyser (BSA)
+# 🌿 Botanic Spectrum Analyser (BSA)
 
 <p align="center"> <img src="BSA_logo.png" width="200" alt="BSA Logo"> </p>
 
@@ -21,14 +21,14 @@ phenotyping workflows — without requiring machine learning expertise.
 
 ------------------------------------------------------------------------
 
-📦 Required Resource Download (Important)
+## 📦 Required Resource Download (Important)
 
 Due to GitHub file size limitations, the Models/ and BSA-internal/
 directories are not included in this repository.
 
 To run BSA correctly, you must download the full resource package:
 
-🔗 Download from:
+## 🔗 Download from:
 https://csi-dublin.ie/
 
 Navigate to the Resources section and download the full BSA RAR package.
@@ -46,7 +46,7 @@ After downloading:
     ├── BSA-internal/        ← Copy from RAR
     ```
 
-⚠️ These folders are required for:
+## ⚠️ These folders are required for:
 
 -   Pre-trained U-Net models (.h5 files)
 -   TensorFlow runtime binaries
@@ -57,9 +57,9 @@ function.
 
 ------------------------------------------------------------------------
 
-🚀 Features
+## 🚀 Features
 
-🧠 1. Deep Learning Segmentation (Mask Creator)
+### 🧠 1. Deep Learning Segmentation (Mask Creator)
 
 -   Pre-trained U-Net models (.h5)
 -   RGB image segmentation
@@ -67,20 +67,20 @@ function.
 -   Batch processing
 -   Automatic binary mask export
 
-🌗 2. HDR Creator (ENVI Header Generator)
+### 🌗 2. HDR Creator (ENVI Header Generator)
 
 -   Create ENVI .hdr files
 -   Define bands, wavelengths, interleave, metadata
 -   Supports BIL / RAW hyperspectral formats
 
-📦 3. Hyperspectral Hypercube Analysis
+### 📦 3. Hyperspectral Hypercube Analysis
 
 -   Dark / White calibration
 -   Pixel-wise calibration
 -   Mask-based ROI extraction
 -   Sequential memory-safe file processing
 
-📊 4. Built-in Vegetation Indices
+### 📊 4. Built-in Vegetation Indices
 
 For VNIR:
 
@@ -95,7 +95,7 @@ For SWIR:
 
 -   Water indices
 
-📈 5. Spectral Visualiser
+### 📈 5. Spectral Visualiser
 
 -   Mean spectral plots
 -   Label-based grouping (via Labels.csv)
@@ -104,7 +104,7 @@ For SWIR:
 
 ------------------------------------------------------------------------
 
-🖥️ Software Architecture
+## 🖥️ Software Architecture
 
 From BSA_v0.5.2.py:
 
@@ -117,7 +117,7 @@ From BSA_v0.5.2.py:
 
 ------------------------------------------------------------------------
 
-📂 Repository Structure
+## 📂 Repository Structure
 
     Botanic-Spectrum-Analyser/
     │
@@ -130,9 +130,9 @@ From BSA_v0.5.2.py:
 
 ------------------------------------------------------------------------
 
-⚙️ How to Run BSA
+## ⚙️ How to Run BSA
 
-Option 1 — Run from Source
+### Option 1 — Run from Source
 
 1.  Clone the repository
     ```r
@@ -159,7 +159,7 @@ Option 1 — Run from Source
     ```
 ------------------------------------------------------------------------
 
-Option 2 — Run Standalone Executable
+### Option 2 — Run Standalone Executable
 
 -   Extract the compiled ZIP package
 -   Ensure BSA-internal/ and Models/ folders are present and populated
@@ -169,17 +169,39 @@ No Python installation required.
 
 ------------------------------------------------------------------------
 
-💡 System Requirements
+## 💡 System Requirements
 
 Recommended:
 
 -   Python 3.9+
 -   8GB+ RAM
 -   GPU optional (TensorFlow supports CPU execution)
+  
+------------------------------------------------------------------------
+
+## 📖 Citation
+
+If you use Botanic Spectrum Analyser (BSA) in your research, please cite:
+
+Walsh, J., et al. (2025).
+_Botanic Spectrum Analyser: A Deep Learning GUI for Plant Image Segmentation in Hyperspectral and RGB Phenotyping_. bioRxiv 2025.09.14.676080.
+DOI: [10.1101/2025.09.14.676080](https://doi.org/10.1101/2025.09.14.676080)
+
+### BibTeX
+```r
+@article{Walsh2025BSA,
+  author    = {Walsh, J. and others},
+  title     = {Botanic Spectrum Analyser: A Deep Learning GUI for Plant Image Segmentation in Hyperspectral and RGB Phenotyping},
+  journal   = {bioRxiv},
+  year      = {2025},
+  doi       = {10.1101/2025.09.14.676080},
+  url       = {https://doi.org/10.1101/2025.09.14.676080}
+}
+```
 
 ------------------------------------------------------------------------
 
-🔓 License
+## 🔓 License
 
 MIT License
 
@@ -192,7 +214,7 @@ copy of this software and associated documentation files…
 
 ------------------------------------------------------------------------
 
-🤝 Contributing
+## 🤝 Contributing
 
 Contributions are welcome!
 
@@ -202,7 +224,7 @@ Contributions are welcome!
 
 ------------------------------------------------------------------------
 
-🌿 Acknowledgements
+## 🌿 Acknowledgements
 
 University College Dublin
 CRRBM – University of Picardie Jules Verne
