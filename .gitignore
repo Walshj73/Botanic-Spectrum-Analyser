@@ -1,11 +1,3 @@
-# Don't commit big binaries/build outputs
-BSA-internal/
-*.exe
-*.dll
-*.pyd
-*.so
-*.dylib
-
 # Python caches
 __pycache__/
 *.pyc
