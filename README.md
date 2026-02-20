@@ -135,26 +135,26 @@ From BSA_v0.5.2.py:
 ### Option 1 — Run from Source
 
 1.  Clone the repository
-    ```r
+    ```bash
     git clone https://github.com/YOUR-USERNAME/Botanic-Spectrum-Analyser.git
     cd Botanic-Spectrum-Analyser
     ```
 
 2.  Create Virtual Environment (Optional)
-    ```r
+    ```python
     python -m venv venv
     Windows: venv\Scripts\activate
     ```
 
 3.  Install Dependencies
-    ```r
+    ```python
     pip install tensorflow opencv-python numpy pandas matplotlib seaborn spectral pillow tqdm cryptography PyPDF2
     ```
 
 4.  Ensure Models/ and BSA-internal/ folders are copied from the downloaded RAR package.
 
 5.  Run the application
-    ```r
+    ```python
     python BSA_v0.5.2.py
     ```
 ------------------------------------------------------------------------
@@ -188,7 +188,7 @@ _Botanic Spectrum Analyser: A Deep Learning GUI for Plant Image Segmentation in 
 DOI: [10.1101/2025.09.14.676080](https://doi.org/10.1101/2025.09.14.676080)
 
 ### BibTeX
-```r
+```
 @article{Walsh2025BSA,
   author    = {Walsh, J. and others},
   title     = {Botanic Spectrum Analyser: A Deep Learning GUI for Plant Image Segmentation in Hyperspectral and RGB Phenotyping},
