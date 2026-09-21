@@ -1,0 +1,25 @@
+{
+  "method": "pspnet_resnet50",
+  "pixel_accuracy": 0.9840984344482422,
+  "mean_iou": 0.4920492172241211,
+  "mean_f1": 0.4959927478204528,
+  "mean_precision": 0.4920492172241211,
+  "mean_recall": 0.5,
+  "freq_weighted_iou": 0.9684497286834812,
+  "per_class_iou": [
+    0.9840984344482422,
+    0.0
+  ],
+  "per_class_f1": [
+    0.9919854956409055,
+    0.0
+  ],
+  "per_class_precision": [
+    0.9840984344482422,
+    0.0
+  ],
+  "per_class_recall": [
+    1.0,
+    0.0
+  ]
+}

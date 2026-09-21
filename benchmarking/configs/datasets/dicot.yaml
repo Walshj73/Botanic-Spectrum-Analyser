@@ -1,0 +1,53 @@
+schema_version: 1
+id: dicot
+display_name: Dicot padded RGB
+root: data/raw/dicot
+images:
+  directory: images
+  extensions: [.png]
+  dimensions: {height: 512, width: 512}
+  source_channels: 3
+  model_channels: 3
+  colour_mode: rgb
+  alpha_handling: absent
+masks:
+  directory: masks
+  extensions: [.png]
+  dimensions: {height: 512, width: 512}
+  format: binary_rgb
+  classes: [background, plant]
+  foreground_values: [255]
+  threshold: 127
+pairing:
+  strategy: token_replacement
+  image_token: _rgb
+  mask_token: _label
+  case_sensitive: true
+preprocessing:
+  normalization: zero_one
+  resize: {height: 512, width: 512}
+  interpolation: bilinear
+  mask_interpolation: nearest
+  auxiliary_channels:
+    - name: excess_green
+      transform: exg
+      enabled: false
+augmentation:
+  enabled: true
+  execution: runtime
+  horizontal_flip_probability: 0.5
+  vertical_flip_probability: 0.5
+  rotations_degrees: [0, 90, 180, 270]
+  brightness_delta: 0.0
+  parameters:
+    historical_offline_augment_factor: 8
+splits:
+  folds: 5
+  validation_fraction: 0.1
+  seed: 42
+  shuffle: true
+  stratify: false
+  group_by_source: true
+notes:
+  - Image and mask stems use _rgb to _label token replacement.
+  - The padded image/mask pair is retained unchanged under the common raw-data layout.

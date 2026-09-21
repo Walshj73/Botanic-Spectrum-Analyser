@@ -1,0 +1,17 @@
+{
+  "method": "pspnet",
+  "device": "gpu",
+  "status": "ok",
+  "policy": "float32",
+  "img_size": 512,
+  "channels": 3,
+  "params": 16196482,
+  "params_m": 16.2,
+  "gflops": 47.8,
+  "gmacs": 23.9,
+  "runs": 100,
+  "warmup": 20,
+  "gpu_ms_mean": 48.2,
+  "gpu_ms_sd": 1.53,
+  "peak_gpu_gb": 0.63
+}

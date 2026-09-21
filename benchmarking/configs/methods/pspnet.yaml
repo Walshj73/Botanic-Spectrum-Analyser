@@ -1,0 +1,22 @@
+schema_version: 1
+id: pspnet
+display_name: PSPNet with ResNet-50 and progressive decoder
+family: deep_learning
+implementation: bsa_benchmark.methods.pspnet:PSPNetSegmentation
+implementation_version: 1.0.0
+accepted_input_channels: [3]
+hyperparameters:
+  weights: null
+  pyramid_bins: [1, 2, 3, 6]
+  pyramid_filters: 512
+training:
+  num_classes: 2
+  batch_size: 4
+  epochs: 150
+  patience: 12
+  learning_rate: 0.0006
+  verbose: 1
+inference:
+  batch_size: 1
+notes:
+  - The decoder fuses stride-8 and stride-4 features, matching the corrected manuscript-era implementation.

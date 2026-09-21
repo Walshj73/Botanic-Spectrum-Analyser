@@ -1,0 +1,17 @@
+{
+  "method": "deeplabv3plus",
+  "device": "gpu",
+  "status": "ok",
+  "policy": "float32",
+  "img_size": 512,
+  "channels": 3,
+  "params": 17830466,
+  "params_m": 17.83,
+  "gflops": 95.2,
+  "gmacs": 47.6,
+  "runs": 100,
+  "warmup": 20,
+  "gpu_ms_mean": 54.43,
+  "gpu_ms_sd": 1.87,
+  "peak_gpu_gb": 0.4
+}

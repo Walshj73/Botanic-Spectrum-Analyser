@@ -1,0 +1,18 @@
+schema_version: 1
+id: svm
+display_name: Standardised linear SVM
+family: classical
+implementation: bsa_benchmark.methods.svm:SVMSegmentation
+implementation_version: 1.0.0
+accepted_input_channels: [3]
+hyperparameters:
+  loss: hinge
+  class_weight: balanced
+  max_iter: 2000
+  tol: 0.001
+training:
+  max_training_pixels: 500000
+  pixels_per_image: 8000
+  feature_set: colour_texture_v1
+notes:
+  - Uses StandardScaler followed by SGDClassifier with hinge loss.

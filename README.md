@@ -1,230 +1,97 @@
 # 🌿 Botanic Spectrum Analyser (BSA)
 
-<p align="center"> <img src="BSA_logo.png" width="200" alt="BSA Logo"> </p>
+<p align="center">
+  <img src="BSA_logo.png" width="200" alt="Botanic Spectrum Analyser logo">
+</p>
 
-A Deep Learning GUI for Plant Image Segmentation and Hyperspectral
-Analysis
+**A graphical application for plant image segmentation and hyperspectral analysis**
 
-Botanic Spectrum Analyser (BSA) is a free and open-source graphical user
-interface (GUI) built in Python that enables plant scientists, breeders,
-and biologists to perform:
+Botanic Spectrum Analyser (BSA) is a Python-based graphical user interface for plant scientists, breeders and biologists. It combines deep learning segmentation with hyperspectral image processing, vegetation index calculation, spectral visualisation and data export.
 
--   🌱 Deep learning–based plant image segmentation
--   🌈 Hyperspectral image calibration and analysis
--   📊 Vegetation index extraction (NDVI, PRI, PSRI, SIPI, NDRE, WP1,
-    etc.)
--   📈 Mean spectral curve visualization
--   🧠 Custom vegetation index computation
+This repository contains two separate components:
 
-BSA bridges the gap between advanced AI segmentation and practical plant
-phenotyping workflows — without requiring machine learning expertise.
+- **BSA application:** the graphical program launched from `BSA_v0.5.2.py`.
+- **[BSA Benchmark](benchmarking/):** a standalone, configuration-driven package for training and evaluating segmentation methods. Its [README](benchmarking/README.md) contains installation and usage instructions.
 
-------------------------------------------------------------------------
+The benchmarking package has its own dependencies and **does not require** the GUI's packaged runtime resources.
 
-## 📦 Required Resource Download (Important)
+## BSA application features
 
-Due to GitHub file size limitations, the Models/ and BSA-internal/
-directories are not included in this repository.
+- **Mask Creator:** segment RGB images and RGB representations of hyperspectral images, process batches and export segmentation masks.
+- **HDR Creator:** generate ENVI-compatible `.hdr` metadata for hyperspectral data, including band, wavelength and interleave information.
+- **Hypercube analysis:** apply dark/white reference calibration, extract mask-based regions of interest and export spectral measurements.
+- **Vegetation indices:** calculate built-in indices, including NDVI, PRI, PSRI, SIPI, NDRE and WP1, or define custom indices.
+- **Spectral Visualiser:** compare mean spectral curves, group samples using labels and export plots and spectra.
 
-To run BSA correctly, you must download the full resource package:
+## Application resources
 
-## 🔗 Download from:
-https://csi-dublin.ie/
+The BSA application uses pre-trained models and, for the packaged Windows executable, supporting runtime files. These large resources are distributed separately from the source code.
 
-Navigate to the Resources section and download the full BSA RAR package.
+Visit **[CSI-Dublin](https://csi-dublin.ie/)**, navigate to **Resources**, and download the BSA resource package. Extract it and place the supplied resources alongside the GUI script as described in the package instructions:
 
-After downloading:
-
-1.  Extract the RAR archive
-2.  Copy the following folders into the root of this repository:
-
-    ```text
-    Botanic-Spectrum-Analyser/
-    │
-    ├── BSA_v0.5.2.py
-    ├── Models/              ← Copy from RAR
-    ├── BSA-internal/        ← Copy from RAR
-    ```
-
-## ⚠️ These folders are required for:
-
--   Pre-trained U-Net models (.h5 files)
--   TensorFlow runtime binaries
--   Internal dependencies used by the compiled executable
-
-Without these folders, segmentation and hyperspectral analysis will not
-function.
-
-------------------------------------------------------------------------
-
-## 🚀 Features
-
-### 🧠 1. Deep Learning Segmentation (Mask Creator)
-
--   Pre-trained U-Net models (.h5)
--   RGB image segmentation
--   Hyperspectral RGB-slice segmentation
--   Batch processing
--   Automatic binary mask export
-
-### 🌗 2. HDR Creator (ENVI Header Generator)
-
--   Create ENVI .hdr files
--   Define bands, wavelengths, interleave, metadata
--   Supports BIL / RAW hyperspectral formats
-
-### 📦 3. Hyperspectral Hypercube Analysis
-
--   Dark / White calibration
--   Pixel-wise calibration
--   Mask-based ROI extraction
--   Sequential memory-safe file processing
-
-### 📊 4. Built-in Vegetation Indices
-
-For VNIR:
-
--   NDVI
--   PRI
--   PSRI
--   SIPI
--   NDRE
--   WP1
-
-For SWIR:
-
--   Water indices
-
-### 📈 5. Spectral Visualiser
-
--   Mean spectral plots
--   Label-based grouping (via Labels.csv)
--   Export plots
--   Export spectra data
-
-------------------------------------------------------------------------
-
-## 🖥️ Software Architecture
-
-From BSA_v0.5.2.py:
-
--   GUI: Tkinter
--   Deep Learning: TensorFlow / Keras
--   Image Processing: OpenCV
--   Hyperspectral Processing: spectral (ENVI support)
--   Plotting: Matplotlib / Seaborn
--   Data handling: NumPy / Pandas
-
-------------------------------------------------------------------------
-
-## 📂 Repository Structure
-
-    Botanic-Spectrum-Analyser/
-    │
-    ├── BSA_v0.5.2.py           # Main GUI application
-    ├── Models/                 # Pre-trained models (download separately - see above)
-    ├── BSA-internal/           # Runtime binaries (download separately - see above)
-    ├── BSA_logo.png
-    ├── BSA_logo.ico
-    └── README.md
-
-------------------------------------------------------------------------
-
-## ⚙️ How to Run BSA
-
-### Option 1 — Run from Source
-
-1.  Clone the repository
-    ```bash
-    git clone https://github.com/YOUR-USERNAME/Botanic-Spectrum-Analyser.git
-    cd Botanic-Spectrum-Analyser
-    ```
-
-2.  Create Virtual Environment (Optional)
-    ```python
-    python -m venv venv
-    Windows: venv\Scripts\activate
-    ```
-
-3.  Install Dependencies
-    ```python
-    pip install tensorflow opencv-python numpy pandas matplotlib seaborn spectral pillow tqdm cryptography PyPDF2
-    ```
-
-4.  Ensure Models/ and BSA-internal/ folders are copied from the downloaded RAR package.
-
-5.  Run the application
-    ```python
-    python BSA_v0.5.2.py
-    ```
-------------------------------------------------------------------------
-
-### Option 2 — Run Standalone Executable
-
--   Extract the compiled ZIP package
--   Ensure BSA-internal/ and Models/ folders are present and populated
--   Double-click the .exe file
-
-No Python installation required.
-
-------------------------------------------------------------------------
-
-## 💡 System Requirements
-
-Recommended:
-
--   Python 3.9+
--   8GB+ RAM
--   GPU optional (TensorFlow supports CPU execution)
-  
-------------------------------------------------------------------------
-
-## 📖 Citation
-
-If you use Botanic Spectrum Analyser (BSA) in your research, please cite:
-
-Walsh, J., et al. (2025).
-_Botanic Spectrum Analyser: A Deep Learning GUI for Plant Image Segmentation in Hyperspectral and RGB Phenotyping_. bioRxiv 2025.09.14.676080.
-DOI: [10.1101/2025.09.14.676080](https://doi.org/10.1101/2025.09.14.676080)
-
-### BibTeX
-```
-@article{Walsh2025BSA,
-  author    = {Walsh, J. and others},
-  title     = {Botanic Spectrum Analyser: A Deep Learning GUI for Plant Image Segmentation in Hyperspectral and RGB Phenotyping},
-  journal   = {bioRxiv},
-  year      = {2025},
-  doi       = {10.1101/2025.09.14.676080},
-  url       = {https://doi.org/10.1101/2025.09.14.676080}
-}
+```text
+Botanic-Spectrum-Analyser/
+├── BSA_v0.5.2.py
+├── Models/             # Pre-trained application models
+└── BSA-internal/       # Packaged executable runtime resources
 ```
 
-------------------------------------------------------------------------
+`Models/` is needed for the GUI's pre-trained segmentation functions. `BSA-internal/` is part of the packaged application distribution; it is **not** a dependency of the separate benchmarking package.
 
-## 🔓 License
+## Running the BSA GUI
 
-MIT License
+### From source
 
-Copyright (c) 2026
+Clone the repository (you will need access if the repository is private):
 
-Permission is hereby granted, free of charge, to any person obtaining a
-copy of this software and associated documentation files…
+```bash
+git clone https://github.com/Walshj73/Botanic-Spectrum-Analyser.git
+cd Botanic-Spectrum-Analyser
+```
 
-(Include full MIT license text in LICENSE file)
+Create a virtual environment and install the GUI dependencies:
 
-------------------------------------------------------------------------
+```bash
+python -m venv .venv
+# Linux/macOS:
+source .venv/bin/activate
+# Windows PowerShell: .venv\Scripts\Activate.ps1
 
-## 🤝 Contributing
+python -m pip install tensorflow opencv-python numpy pandas matplotlib seaborn spectral pillow tqdm cryptography PyPDF2
+```
 
-Contributions are welcome!
+Place the required model files in `Models/`, then launch:
 
--   Fork the repo
--   Create a feature branch
--   Submit a pull request
+```bash
+python BSA_v0.5.2.py
+```
 
-------------------------------------------------------------------------
+Dependency compatibility for the GUI may depend on your operating system and Python version. The GUI installation above is separate from the tested Python 3.12 benchmarking environment.
 
-## 🌿 Acknowledgements
+### Windows executable
 
-University College Dublin
-CRRBM – University of Picardie Jules Verne
+Download and extract the packaged BSA release from the CSI-Dublin Resources page, keeping its models and runtime directories alongside the executable. Launch the supplied `.exe`; a separate Python installation is not required for the packaged application.
+
+## 🔬 Segmentation benchmarking
+
+The **[benchmarking/](benchmarking/)** directory contains a standalone Python package for user-selected segmentation experiments. It supports BSA/SDA-UNet, Random Forest, SVM, SLIC-RF, FCN-ResNet50, DeepLabV3+ and PSPNet.
+
+Researchers can configure datasets, training parameters and cross-validation runs, then generate predictions and evaluation reports. The numerical records associated with the BSA manuscript are available under **[benchmarking/results/](benchmarking/results/)**. New experiment output is kept separate from those records.
+
+Start with the **[benchmarking README](benchmarking/README.md)** for installation instructions, dataset configuration and example commands. The raw manuscript image datasets are not included in this repository.
+
+## Citation
+
+If you use BSA or its benchmarking framework, please cite the associated manuscript. The preprint record is:
+
+Walsh, J., et al. (2025). *Botanic Spectrum Analyser: A Deep Learning GUI for Plant Image Segmentation in Hyperspectral and RGB Phenotyping.* bioRxiv. [https://doi.org/10.1101/2025.09.14.676080](https://doi.org/10.1101/2025.09.14.676080)
+
+If citing the final journal publication, use its definitive bibliographic record in place of the preprint reference above.
+
+## License
+
+See [LICENSE](LICENSE) for the repository's licence terms.
+
+## Acknowledgements
+
+University College Dublin · CRRBM — University of Picardie Jules Verne · CSI-Dublin

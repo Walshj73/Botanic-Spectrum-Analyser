@@ -1,0 +1,14 @@
+{
+  "method": "pspnet",
+  "device": "cpu",
+  "status": "ok",
+  "policy": "float32",
+  "img_size": 512,
+  "channels": 3,
+  "params": 16196482,
+  "params_m": 16.2,
+  "runs": 20,
+  "warmup": 5,
+  "cpu_s_mean": 0.516,
+  "cpu_s_sd": 0.013
+}

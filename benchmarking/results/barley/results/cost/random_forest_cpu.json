@@ -1,0 +1,6 @@
+{
+  "method": "random_forest",
+  "device": "cpu",
+  "status": "n/a",
+  "note": "no fitted estimator found in files/fitted"
+}

@@ -1,0 +1,15 @@
+{
+  "method": "bsa",
+  "device": "cpu",
+  "status": "ok",
+  "policy": "float32",
+  "img_size": 512,
+  "channels": 4,
+  "params": 3336842,
+  "params_m": 3.34,
+  "runs": 20,
+  "warmup": 5,
+  "cpu_s_mean": 0.246,
+  "cpu_s_sd": 0.012,
+  "exg_preproc_ms": 3.29
+}

@@ -1,0 +1,59 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Editors and local machine configuration
+.DS_Store
+.idea/
+.vscode/
+.agents/
+.codex/
+.env
+.env.*
+!.env.example
+configs/local/*
+!configs/local/.gitkeep
+
+# Raw and prepared datasets
+/data/raw/
+/data/interim/
+/data/processed/
+**/Images/
+**/Masks/
+**/Masks Binary/
+**/Dataset_CV/
+**/Barley_CV/
+**/Wheat_CV/
+**/Dataset_Padded/
+**/Dataset_Padded_CV/
+
+# Generated benchmark outputs
+/runs/
+/outputs/
+**/checkpoints/
+**/predictions/
+**/predictions_view/
+**/evaluation_output/
+**/eval/
+*.h5
+*.hdf5
+*.keras
+*.ckpt
+*.joblib
+*.pkl
+
+# Image assets are data or generated artifacts in this repository
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+*.bmp

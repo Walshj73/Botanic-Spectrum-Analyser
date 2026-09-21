@@ -1,0 +1,20 @@
+schema_version: 1
+id: fcn_resnet50
+display_name: FCN-8s with ResNet-50
+family: deep_learning
+implementation: bsa_benchmark.methods.fcn:FCNResNet50Segmentation
+implementation_version: 1.0.0
+accepted_input_channels: [3]
+hyperparameters:
+  weights: null
+training:
+  num_classes: 2
+  batch_size: 4
+  epochs: 150
+  patience: 12
+  learning_rate: 0.0006
+  verbose: 1
+inference:
+  batch_size: 1
+notes:
+  - Set weights to imagenet to use pretrained weights; this can require a download.

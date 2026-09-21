@@ -1,0 +1,7 @@
+{
+  "platform": "Windows-10-10.0.26200-SP0",
+  "cpu": "12th Gen Intel(R) Core(TM) i7-12700KF",
+  "ram_gb": 31.8,
+  "cpu_cores_physical": 12,
+  "cpu_cores_logical": 20
+}

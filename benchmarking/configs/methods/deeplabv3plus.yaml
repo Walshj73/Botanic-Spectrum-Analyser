@@ -1,0 +1,19 @@
+schema_version: 1
+id: deeplabv3plus
+display_name: DeepLabV3+ with ResNet-50
+family: deep_learning
+implementation: bsa_benchmark.methods.deeplabv3plus:DeepLabV3PlusSegmentation
+implementation_version: 1.0.0
+accepted_input_channels: [3]
+hyperparameters:
+  weights: null
+  aspp_filters: 256
+training:
+  num_classes: 2
+  batch_size: 4
+  epochs: 150
+  patience: 12
+  learning_rate: 0.0006
+  verbose: 1
+inference:
+  batch_size: 1

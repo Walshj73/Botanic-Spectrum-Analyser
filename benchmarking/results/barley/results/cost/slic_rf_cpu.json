@@ -1,0 +1,6 @@
+{
+  "method": "slic_rf",
+  "device": "cpu",
+  "status": "n/a",
+  "note": "no fitted estimator found in files/fitted"
+}

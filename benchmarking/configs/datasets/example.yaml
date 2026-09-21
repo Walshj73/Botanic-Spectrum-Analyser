@@ -1,0 +1,44 @@
+schema_version: 1
+id: example
+display_name: Example binary segmentation dataset
+root: data/raw/example
+images:
+  directory: images
+  extensions: [.png, .jpg, .tif]
+  dimensions: {height: 512, width: 512}
+  source_channels: 3
+  model_channels: 3
+  colour_mode: rgb
+  alpha_handling: absent
+masks:
+  directory: masks
+  extensions: [.png, .tif]
+  dimensions: {height: 512, width: 512}
+  format: binary_grayscale
+  classes: [background, foreground]
+  foreground_values: [255]
+  threshold: 127
+pairing:
+  strategy: identical_stem
+preprocessing:
+  normalization: zero_one
+  resize: {height: 512, width: 512}
+  interpolation: bilinear
+  mask_interpolation: nearest
+augmentation:
+  enabled: true
+  execution: runtime
+  horizontal_flip_probability: 0.5
+  vertical_flip_probability: 0.5
+  rotations_degrees: [0, 90, 180, 270]
+  brightness_delta: 0.05
+  contrast_range: [0.9, 1.1]
+splits:
+  folds: 5
+  validation_fraction: 0.2
+  seed: 42
+  shuffle: true
+  stratify: false
+  group_by_source: false
+notes:
+  - Copy this file and change paths, dimensions, mask encoding, and grouping for a new dataset.

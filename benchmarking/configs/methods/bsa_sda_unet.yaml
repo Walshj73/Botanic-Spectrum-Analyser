@@ -1,0 +1,25 @@
+schema_version: 1
+id: bsa_sda_unet
+display_name: BSA / SDA-UNet
+family: deep_learning
+implementation: bsa_benchmark.methods.sda_unet:SDAUNetSegmentation
+implementation_version: 1.0.0
+accepted_input_channels: [3, 4]
+hyperparameters:
+  base_filters: 24
+  dropout_rate: 0.2
+  stem: true
+  separable: false
+training:
+  num_classes: 2
+  loss: bce_dice
+  batch_size: 4
+  epochs: 150
+  patience: 12
+  learning_rate: 0.0006
+  verbose: 1
+inference:
+  batch_size: 1
+notes:
+  - Stable logits-output SDA-UNet with downsampling stem, attention gates, ASPP, residual blocks and SE attention.
+  - Use a four-channel dataset configuration to include ExG, NExM, ExM or strict-purple auxiliary input.

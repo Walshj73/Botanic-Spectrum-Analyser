@@ -1,0 +1,17 @@
+{
+  "method": "fcn",
+  "device": "gpu",
+  "status": "ok",
+  "policy": "float32",
+  "img_size": 512,
+  "channels": 3,
+  "params": 23596044,
+  "params_m": 23.6,
+  "gflops": 40.4,
+  "gmacs": 20.2,
+  "runs": 100,
+  "warmup": 20,
+  "gpu_ms_mean": 63.24,
+  "gpu_ms_sd": 22.77,
+  "peak_gpu_gb": 0.19
+}

@@ -1,0 +1,17 @@
+schema_version: 1
+id: barley_rf_cross_validation
+display_name: Barley Random Forest five-fold benchmark
+dataset_config: configs/datasets/barley.yaml
+method_config: configs/methods/random_forest.yaml
+protocol:
+  type: cross_validation
+  folds: 5
+  validation_fraction: 0.1
+  split_seed: 42
+seed: 42
+deterministic_operations: true
+output_root: runs
+tags: [benchmark, cross_validation, classical]
+notes:
+  - Fixed method settings are read from the method configuration.
+

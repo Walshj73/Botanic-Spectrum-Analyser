@@ -1,0 +1,19 @@
+schema_version: 1
+id: random_forest
+display_name: Pixel-feature Random Forest
+family: classical
+implementation: bsa_benchmark.methods.random_forest:RandomForestSegmentation
+implementation_version: 1.0.0
+accepted_input_channels: [3]
+hyperparameters:
+  n_estimators: 200
+  max_depth: null
+  min_samples_leaf: 1
+  class_weight: balanced
+  n_jobs: -1
+training:
+  max_training_pixels: 500000
+  pixels_per_image: 8000
+  feature_set: colour_texture_v1
+notes:
+  - Uses the colour/texture feature stack migrated from the manuscript scripts.

@@ -1,0 +1,17 @@
+{
+  "method": "bsa",
+  "device": "gpu",
+  "status": "ok",
+  "policy": "float32",
+  "img_size": 512,
+  "channels": 4,
+  "params": 3336842,
+  "params_m": 3.34,
+  "gflops": 24.8,
+  "gmacs": 12.4,
+  "runs": 100,
+  "warmup": 20,
+  "gpu_ms_mean": 50.47,
+  "gpu_ms_sd": 2.97,
+  "peak_gpu_gb": 0.25
+}

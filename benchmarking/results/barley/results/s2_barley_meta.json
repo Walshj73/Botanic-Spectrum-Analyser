@@ -1,0 +1,14 @@
+{
+  "dataset": "Barley_CV",
+  "protocol": "pooled 5-fold CV, each image scored in its held-out fold",
+  "n_gt_images": 100,
+  "num_classes": 2,
+  "ignore_index": 255,
+  "n_boot": 10000,
+  "alpha": 0.05,
+  "ci_method": "percentile",
+  "seed": 42,
+  "seed_mode": "average",
+  "resampling_unit": "image",
+  "note": "Metrics use benchmark_common.ConfusionMatrix, one per image; foreground = class indices >= 1."
+}

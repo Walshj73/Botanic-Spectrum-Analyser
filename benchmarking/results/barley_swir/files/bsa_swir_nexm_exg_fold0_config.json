@@ -1,0 +1,15 @@
+{
+  "data_root": "Dataset_CV\\fold0",
+  "img_size": 512,
+  "batch_size": 8,
+  "epochs": 150,
+  "patience": 10,
+  "lr": 0.001,
+  "base_filters": 24,
+  "dropout": 0.3,
+  "seed": 42,
+  "aux_channel": "exg",
+  "method_name": "bsa_swir_nexm",
+  "channels": 4,
+  "auxiliary_formula": "2G-R-B"
+}

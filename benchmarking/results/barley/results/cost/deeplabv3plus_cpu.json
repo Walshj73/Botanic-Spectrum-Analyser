@@ -1,0 +1,14 @@
+{
+  "method": "deeplabv3plus",
+  "device": "cpu",
+  "status": "ok",
+  "policy": "float32",
+  "img_size": 512,
+  "channels": 3,
+  "params": 17830466,
+  "params_m": 17.83,
+  "runs": 20,
+  "warmup": 5,
+  "cpu_s_mean": 0.486,
+  "cpu_s_sd": 0.008
+}

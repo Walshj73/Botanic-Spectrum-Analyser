@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bsa-benchmark"
+version = "1.0.0"
+description = "Reproducible segmentation benchmarks associated with the BSA manuscript"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "Pillow>=10.4",
+    "pydantic>=2.10,<3",
+    "PyYAML>=6.0,<7",
+]
+
+[project.optional-dependencies]
+classical = [
+    "scikit-image>=0.24",
+    "scikit-learn>=1.5",
+]
+deep = [
+    "tensorflow>=2.16,<3",
+]
+dev = [
+    "pytest>=8",
+    "pytest-cov>=5",
+    "ruff>=0.8",
+]
+
+[project.scripts]
+bsa-benchmark = "bsa_benchmark.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

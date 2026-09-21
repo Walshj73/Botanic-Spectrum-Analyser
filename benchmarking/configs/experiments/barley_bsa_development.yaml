@@ -1,0 +1,14 @@
+schema_version: 1
+id: barley_bsa_development
+display_name: Barley BSA/SDA-UNet development benchmark
+dataset_config: configs/datasets/barley.yaml
+method_config: configs/methods/bsa_sda_unet.yaml
+protocol:
+  type: development
+  validation_fraction: 0.2
+  test_fraction: 0.2
+  split_seed: 42
+seed: 42
+deterministic_operations: true
+output_root: runs
+tags: [benchmark, development, deep_learning]

@@ -1,0 +1,14 @@
+{
+  "method": "fcn",
+  "device": "cpu",
+  "status": "ok",
+  "policy": "float32",
+  "img_size": 512,
+  "channels": 3,
+  "params": 23596044,
+  "params_m": 23.6,
+  "runs": 20,
+  "warmup": 5,
+  "cpu_s_mean": 0.353,
+  "cpu_s_sd": 0.014
+}
