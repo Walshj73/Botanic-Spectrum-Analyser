@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Botanic Spectrum Analyser
+Comment=Hyperspectral plant image analysis
+Exec=botanic-spectrum-analyser
+Icon=botanic-spectrum-analyser
+Terminal=false
+Categories=Science;

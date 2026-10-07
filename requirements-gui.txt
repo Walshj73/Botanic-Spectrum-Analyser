@@ -1,0 +1,10 @@
+tensorflow==2.21.0
+opencv-python==5.0.0.93
+numpy==2.5.3
+pandas==3.0.6
+matplotlib==3.11.2
+seaborn==0.13.2
+spectral==0.25
+pillow==12.3.0
+tqdm==4.70.1
+openpyxl==3.1.5

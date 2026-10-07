@@ -1,0 +1,10 @@
+**
+!requirements-gui.txt
+!packaging/
+!packaging/linux/
+!packaging/linux/Dockerfile
+!packaging/linux/requirements-build.txt
+!packaging/linux/fonts.conf
+!packaging/linux/runtime_hook.py
+!packaging/linux/entrypoint.py
+!packaging/linux/smoke.py

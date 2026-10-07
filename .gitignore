@@ -1,12 +1,91 @@
-# Python caches
-__pycache__/
-*.pyc
+# Local BSA resources distributed separately from the source repository
+/BSA-internal/
+/Models/
+/HDR Files/
+/Example Datasets/
+/Example SWIR Dataset/
 
-# Build / packaging
-dist/
-build/
-*.zip
-*.7z
-*.tar
-*.tar.gz
-*.whl
+# Python virtual environments
+/.venv/
+/.venv-*/
+/.venv-gui/
+/.venv-security/
+/venv/
+/env/
+
+# Python caches, coverage and local tooling state
+__pycache__/
+*.py[cod]
+*$py.class
+/.pytest_cache/
+/.mypy_cache/
+/.ruff_cache/
+/.coverage
+/htmlcov/
+/.runtime-cache/
+/.cache/
+/.agents/
+/.codex/
+/.aws/
+
+# Generated BSA analysis and label exports at the repository root
+/Results-*.csv
+/Results-*.xlsx
+/Labels.csv
+/mean_spectra*.csv
+/mean_spectra*.xlsx
+/label-manifests/
+/*-labels.csv
+/*-label-manifest.csv
+/*.tmp
+/*.temp
+/*.log
+
+# Generated segmentation masks and local generated datasets
+/Masks/
+/Masks-*/
+/*-PlantMask.png
+/*-PlantMask.jpg
+/data/
+/datasets/
+/generated-data/
+/generated-datasets/
+/tests/
+/SECURITY_AUDIT_PHASE1.md
+
+# Model weights and checkpoints stored outside the excluded Models directory
+/*.h5
+/*.keras
+/*.onnx
+/*.pt
+/*.pth
+/*.ckpt
+/*.ckpt.*
+/*.weights.h5
+/checkpoints/
+/model-checkpoints/
+
+# Windows/PyInstaller build products and release archives
+/build/
+/dist/
+/release-linux/
+/_internal/
+/windows-build/
+/windows-dist/
+/*.zip
+/*.7z
+/*.tar
+/*.tar.gz
+/*.AppImage
+/*.whl
+
+# Machine-specific editor and operating-system files
+/.idea/
+/.vscode/
+/*.code-workspace
+/.env
+/.env.*
+!/.env.example
+.DS_Store
+Thumbs.db
+Desktop.ini
