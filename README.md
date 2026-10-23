@@ -186,8 +186,6 @@ Walsh, J., et al. (2025). *Botanic Spectrum Analyser: A Deep Learning GUI for
 Plant Image Segmentation in Hyperspectral and RGB Phenotyping.* bioRxiv.
 [https://doi.org/10.1101/2025.09.14.676080](https://doi.org/10.1101/2025.09.14.676080)
 
-If a journal version has been published, please cite that instead.
-
 ## Licence
 
 BSA is released under the [MIT License](LICENSE).
